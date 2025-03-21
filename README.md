@@ -1,31 +1,63 @@
-# React & Tailwind CSS Starter Pack
+# React Product Management Project
 
-This is a starter pack for creating React projects with Tailwind CSS configured. It uses React version **18.2** and Tailwind CSS version **3.2**.
+This is a React-based project for managing and displaying products. It includes components for displaying products, adding new products, and handling dates.
 
-## Usage
+## Project Structure
 
-This starter pack includes a basic setup for using **Tailwind CSS with React**. To start building your own components and styles, follow these steps:
+```
+/src
+│── ItemDate.jsx       # Displays formatted date for a product
+│── NewProduct.jsx     # Form to add a new product
+│── Products.jsx       # Displays a list of products
+│── App.js            # Main application file
+│── index.js          # Renders the React application
+```
 
-1. Clone the repository to your local machine.
-    ```sh
-    git clone https://github.com/thepranaygupta/react-tailwind-css-starter-pack.git
-    ```
+## Components Overview
 
-1. Install the required packages.
-    ```sh
-    cd react-tailwind-css-starter-pack
-    npm install
-    ```
+### `ItemDate.jsx`
+This component receives a date as a prop and formats it into a readable format (month, day, year).
 
-1. Start the development server.
-    ```sh
-    npm start
-    ```
-1. Open the project in your browser at [`http://localhost:3000`](http://localhost:3000) to view your project.
-1. Create your React components and add your styles using Tailwind classes. You can also create new CSS files and import them into your components.
+#### Example Usage:
+```jsx
+<ItemDate date={new Date()} />
+```
 
-The project is set up to use `postcss-cli` to process your CSS files. You can add your own `tailwind.config.js` file to customize your Tailwind setup.
+### `NewProduct.jsx`
+A form component that allows users to add a new product by entering a name and selecting a date.
 
-## Contributing
+#### Features:
+- Uses `useState` to manage form inputs.
+- Calls `console.log()` to output form data upon submission.
 
-Contributions are welcome! If you have any suggestions or find any issues, please feel free to open an issue or a pull request.
+### `Products.jsx`
+Displays a list of products, including the product name, date, and an "Add to Cart" button.
+
+#### Props:
+- `products`: An array of product objects containing:
+  - `title`: The name of the product.
+  - `date`: The date associated with the product.
+
+#### Example Usage:
+```jsx
+const productList = [
+  { title: 'Laptop', date: new Date() },
+  { title: 'Phone', date: new Date() }
+];
+
+<Products products={productList} />
+```
+
+## Technologies Used
+- React.js
+- Tailwind CSS
+
+## Connect with Me
+- 🔗 LinkedIn: [mrravikumar](https://www.linkedin.com/in/mrravikumar)
+- 🔗 Portfolio: [mrravikumar.com](https://www.mrravikumar.com)
+- 🌐 Website: [dsa2web.com](https://www.dsa2web.com)
+- 📘 Facebook Page: [dsa2web](https://www.facebook.com/dsa2web)
+- 📸 Instagram: [@dsa2web](https://www.instagram.com/dsa2web)
+- 🐦 Twitter: [@dsa2web](https://www.twitter.com/dsa2web)
+- 📩 LinkedIn Page: [dsa2web](https://www.linkedin.com/company/dsa2web)
+- 📢 Telegram: [t.me/dsa2web](https://t.me/dsa2web)
